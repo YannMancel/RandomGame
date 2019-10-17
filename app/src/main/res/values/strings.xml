@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">RandomGame</string>
+    <string name="MainActivity_name">Random game</string>
+    <string name="DiceActivity_name">Roll of dice</string>
+    <string name="RandomDrawActivity_name">Random draw</string>
+
+    <!-- activity_mail.xml -->
+    <string name="roll_of_dice_text">ROLL OF DICE</string>
+    <string name="random_draw_text">RANDOM DRAW</string>
+
+    <!-- item_dice.xml -->
+    <string name="dice_id">Dice number: 1</string>
+    <string name="dice_result">Result: 6</string>
+
+</resources>

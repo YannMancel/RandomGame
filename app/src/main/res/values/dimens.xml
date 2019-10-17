@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- MARGIN -->
+    <dimen name="margin_normal">16dp</dimen>
+
+    <!-- PADDING -->
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_huge">72dp</dimen>
+
+    <!-- FLOATING ACTION BUTTON -->
+<!--    <dimen name="design_fab_image_size" tools:override="true">56dp</dimen>-->
+
+    <!-- BUTTON -->
+    <dimen name="radius_button">10dp</dimen>
+    <dimen name="text_size_button">14sp</dimen>
+    <dimen name="elevation_button">9dp</dimen>
+
+    <!-- APP BAR -->
+    <dimen name="height_app_bar">300dp</dimen>
+
+    <!-- TOOL BAR -->
+    <dimen name="elevation_tool_bar">4dp</dimen>
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.MainActivity">
+
+    <!-- IMAGE VIEW : IMAGE -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null"
+        android:src="@drawable/dices"
+        android:scaleType="centerCrop"/>
+
+    <!-- IMAGE VIEW : GRADIENT FILTER -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null"
+        android:src="@drawable/gradient_filter"
+        android:alpha="@integer/opacity_filter"/>
+
+    <!-- TOOL BAR -->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/MainActivity_name"
+        app:titleTextColor="@android:color/white" />
+
+    <!-- BUTTON : ROLL OF DICE -->
+
+    <Button
+        android:id="@+id/activity_main_Button_dice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_Button_random_draw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/roll_of_dice_text"
+        style="@style/Button" />
+
+    <!-- BUTTON : RANDOM DRAW -->
+
+    <Button
+        android:id="@+id/activity_main_Button_random_draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/random_draw_text"
+        style="@style/Button" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_fabs_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- FLOATING ACTION BUTTON : Number 3 -->
+
+        <!--            <android.support.design.widget.FloatingActionButton-->
+        <!--                android:id="@+id/layout_fabs_fab_3"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                app:layout_constraintStart_toStartOf="@id/layout_fabs_fab_2"-->
+        <!--                app:layout_constraintEnd_toEndOf="@id/layout_fabs_fab_2"-->
+        <!--                app:layout_constraintBottom_toTopOf="@id/layout_fabs_fab_2"-->
+        <!--                android:layout_marginBottom="8dp"-->
+        <!--                app:fabSize="mini"-->
+        <!--                android:src="@drawable/ic_mic_none_white_24dp"-->
+        <!--                android:backgroundTint="@color/colorRight" />-->
+
+        <!-- FLOATING ACTION BUTTON : Number 2 -->
+
+        <!--            <android.support.design.widget.FloatingActionButton-->
+        <!--                android:id="@+id/layout_fabs_fab_2"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                app:layout_constraintStart_toStartOf="@id/layout_fabs_fab_1"-->
+        <!--                app:layout_constraintEnd_toEndOf="@id/layout_fabs_fab_1"-->
+        <!--                app:layout_constraintBottom_toTopOf="@id/layout_fabs_fab_1"-->
+        <!--                android:layout_marginBottom="8dp"-->
+        <!--                app:fabSize="mini"-->
+        <!--                android:src="@drawable/ic_mic_none_white_24dp"-->
+        <!--                android:backgroundTint="@color/colorLeft" />-->
+
+        <!-- FLOATING ACTION BUTTON : Number 1 -->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/layout_fabs_fab_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/layout_fabs_fab_0"
+            app:layout_constraintEnd_toEndOf="@id/layout_fabs_fab_0"
+            app:layout_constraintBottom_toTopOf="@id/layout_fabs_fab_0"
+            android:layout_marginBottom="8dp"
+            app:fabSize="mini"
+            android:src="@drawable/ic_mic_none_white_24dp"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <!-- FLOATING ACTION BUTTON : Number 0 -->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/layout_fabs_fab_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:fabSize="normal"
+            android:src="@drawable/ic_add"/>
+
+        <!--
+
+        android:src="@drawable/fab"
+
+        or
+
+        android:src="@drawable/ic_add"
+        android:tint="@android:color/black"
+        +
+        Delete the override value
+
+        tests:
+        android:tint="@color/colorPrimary"
+        android:backgroundTint="@color/colorLeft"
+        android:backgroundTint="@color/colorPrimary"
+
+        -->
+
+    </android.support.constraint.ConstraintLayout>
+
+</merge>

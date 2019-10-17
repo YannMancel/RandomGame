@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- BUTTON GRADIENT -->
+    <integer name="gradient_button">0</integer>
+
+    <!-- GRADIENT FILTER -->
+    <integer name="gradient_filter">90</integer>
+    <item name="opacity_filter" type="integer" format="float">0.8</item>
+
+    <!-- ANIMATION -->
+    <integer name="duration_animation">@android:integer/config_mediumAnimTime</integer>
+
+</resources>

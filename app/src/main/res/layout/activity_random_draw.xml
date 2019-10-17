@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.RandomDrawActivity">
+
+    <!-- IMAGE VIEW : IMAGE -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null"
+        android:src="@drawable/dices"
+        android:scaleType="centerCrop"/>
+
+    <!-- IMAGE VIEW : GRADIENT FILTER -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null"
+        android:src="@drawable/gradient_filter"
+        android:alpha="@integer/opacity_filter"/>
+
+    <!-- TOOL BAR -->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/RandomDrawActivity_name"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+</android.support.constraint.ConstraintLayout>
