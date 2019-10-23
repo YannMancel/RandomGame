@@ -26,9 +26,6 @@ import kotlinx.android.synthetic.main.layout_fabs.*
  *
  * A [BaseActivity] subclass which implements [View.OnClickListener].
  */
-
-const val TRANSLATION_Y = "translationY"
-
 class DiceActivity : BaseActivity(), View.OnClickListener {
 
     // FIELDS --------------------------------------------------------------------------------------
@@ -98,6 +95,9 @@ class DiceActivity : BaseActivity(), View.OnClickListener {
 
     // -- RECYCLER VIEW --
 
+    /**
+     * Configures the [RecyclerView]
+     */
     private fun configureRecyclerView() {
         // DATA
         val dices: MutableList<Dice> = mutableListOf()
@@ -113,21 +113,15 @@ class DiceActivity : BaseActivity(), View.OnClickListener {
 
     // -- FLOATING ACTION BUTTON --
 
+    /**
+     * Configures the set of [FloatingActionButton]
+     */
     private fun configureListenerOfFABs() {
-        // FAB 0
+        // FABs
         this.mFab0.setOnClickListener(this)
-
-        // FAB 1
         this.mFab1.setOnClickListener(this)
-        // this.mFab1.hide()
-
-        // FAB 2
         this.mFab2.setOnClickListener(this)
-        // this.mFab2.hide()
-
-        // FAB 3
         this.mFab3.setOnClickListener(this)
-        // this.mFab3.hide()
 
         // CONSTRAINT LAYOUT
         this.mLayoutContainer.viewTreeObserver.addOnPreDrawListener(
@@ -153,6 +147,9 @@ class DiceActivity : BaseActivity(), View.OnClickListener {
         )
     }
 
+    /**
+     * Configures the behavior of [FloatingActionButton] when it is expanded
+     */
     private fun configureExpandableFABs() {
         Toast.makeText(this, "Expanded", Toast.LENGTH_SHORT).show()
 
@@ -162,26 +159,21 @@ class DiceActivity : BaseActivity(), View.OnClickListener {
             (drawable as Animatable).start()
         }
 
-        // FAB 1
-        //this.mFab1.show()
-        this.mFab1.translationY = - this.mOffset1
-
-        // FAB 2
-        //this.mFab2.show()
-        this.mFab2.translationY = - this.mOffset2
-
-        // FAB 3
-        //this.mFab3.show()
-        this.mFab3.translationY = - this.mOffset3
-
-//        val animatorSet = AnimatorSet().apply {
-//            playTogether(createExpandAnimator(mFab1, mOffset1),
-//                         createExpandAnimator(mFab2, mOffset2),
-//                         createExpandAnimator(mFab3, mOffset3))
-//            start()
-//        }
+        // ANIMATOR SET
+        AnimatorSet().apply {
+            playTogether(createTranslateYAnimator(mFab1, mOffset1, 0F),
+                         createVisibilityAnimator(mFab1, 0F, 1F, 1500),
+                         createTranslateYAnimator(mFab2, mOffset2, 0F),
+                         createVisibilityAnimator(mFab2, 0F, 1F, 1500),
+                         createTranslateYAnimator(mFab3, mOffset3, 0F),
+                         createVisibilityAnimator(mFab3, 0F, 1F, 1500))
+            start()
+        }
     }
 
+    /**
+     * Configures the behavior of [FloatingActionButton] when it is collapsed
+     */
     private fun configureCollapseFABs() {
         Toast.makeText(this, "Collapsed", Toast.LENGTH_SHORT).show()
 
@@ -191,31 +183,42 @@ class DiceActivity : BaseActivity(), View.OnClickListener {
             (drawable as Animatable).start()
         }
 
-        // FAB 1
-        //this.mFab1.hide()
-        this.mFab1.translationY = this.mOffset1
-
-        // FAB 2
-        //this.mFab2.hide()
-        this.mFab2.translationY = this.mOffset2
-
-        // FAB 3
-        //this.mFab3.hide()
-        this.mFab3.translationY = this.mOffset3
-
-//        val animatorSet = AnimatorSet().apply {
-//            playTogether(createCollapseAnimator(mFab1, mOffset1),
-//                         createCollapseAnimator(mFab2, mOffset2),
-//                         createCollapseAnimator(mFab3, mOffset3))
-//            start()
-//        }
+        // ANIMATOR SET
+        AnimatorSet().apply {
+            playTogether(createTranslateYAnimator(mFab1, 0F, mOffset1),
+                         createVisibilityAnimator(mFab1, 1F, 0F, 200),
+                         createTranslateYAnimator(mFab2, 0F, mOffset2),
+                         createVisibilityAnimator(mFab2, 1F, 0F, 200),
+                         createTranslateYAnimator(mFab3, 0F, mOffset3),
+                         createVisibilityAnimator(mFab3, 1F, 0F, 200))
+            start()
+        }
     }
 
     // -- ANIMATOR --
 
-//    private fun createCollapseAnimator(view: View, offset: Float) = ObjectAnimator.ofFloat(view, TRANSLATION_Y, 0,offset)
-//                                                                                  .duration(resources.getInteger(R.integer.duration_animation))
-//
-//    private fun createExpandAnimator(view: View, offset: Float) = ObjectAnimator.ofFloat(view, TRANSLATION_Y, offset, 0)
-//                                                                                .duration(resources.getInteger(R.integer.duration_animation))
+    /**
+     * Returns a [ObjectAnimator] which allows to translate in Y
+     * @param view      the [View] which will be animated
+     * @param valueFrom the [Float] that contains the initial value of translation in Y
+     * @param valueTo   the [Float] that contains the final value of translation in Y
+     * @return the [ObjectAnimator] which allows to translate in Y
+     */
+    private fun createTranslateYAnimator(view: View, valueFrom: Float, valueTo: Float): ObjectAnimator {
+        return ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, valueFrom,valueTo)
+                             .setDuration(resources.getInteger(R.integer.duration_animation).toLong())
+    }
+
+    /**
+     * Returns a [ObjectAnimator] which allows to animate in alpha
+     * @param view      the [View] which will be animated
+     * @param alphaIn   the [Float] that contains the initial value of alpha
+     * @param alphaOut  the [Float] that contains the final value of alpha
+     * @param time  the [Long] that contains the duration value
+     * @return the [ObjectAnimator] which allows to animate in alpha
+     */
+    private fun createVisibilityAnimator(view: View, alphaIn: Float, alphaOut: Float, time: Long): ObjectAnimator {
+        return ObjectAnimator.ofFloat(view, View.ALPHA, alphaIn, alphaOut)
+                             .setDuration(time)
+    }
 }
