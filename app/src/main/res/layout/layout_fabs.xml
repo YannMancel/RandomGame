@@ -11,31 +11,31 @@
 
         <!-- FLOATING ACTION BUTTON : Number 3 -->
 
-        <!--            <android.support.design.widget.FloatingActionButton-->
-        <!--                android:id="@+id/layout_fabs_fab_3"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                app:layout_constraintStart_toStartOf="@id/layout_fabs_fab_2"-->
-        <!--                app:layout_constraintEnd_toEndOf="@id/layout_fabs_fab_2"-->
-        <!--                app:layout_constraintBottom_toTopOf="@id/layout_fabs_fab_2"-->
-        <!--                android:layout_marginBottom="8dp"-->
-        <!--                app:fabSize="mini"-->
-        <!--                android:src="@drawable/ic_mic_none_white_24dp"-->
-        <!--                android:backgroundTint="@color/colorRight" />-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/layout_fabs_fab_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/layout_fabs_fab_2"
+            app:layout_constraintEnd_toEndOf="@id/layout_fabs_fab_2"
+            app:layout_constraintBottom_toTopOf="@id/layout_fabs_fab_2"
+            android:layout_marginBottom="8dp"
+            app:fabSize="mini"
+            android:src="@drawable/ic_mic_none_white_24dp"
+            android:backgroundTint="@color/colorRight" />
 
         <!-- FLOATING ACTION BUTTON : Number 2 -->
 
-        <!--            <android.support.design.widget.FloatingActionButton-->
-        <!--                android:id="@+id/layout_fabs_fab_2"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                app:layout_constraintStart_toStartOf="@id/layout_fabs_fab_1"-->
-        <!--                app:layout_constraintEnd_toEndOf="@id/layout_fabs_fab_1"-->
-        <!--                app:layout_constraintBottom_toTopOf="@id/layout_fabs_fab_1"-->
-        <!--                android:layout_marginBottom="8dp"-->
-        <!--                app:fabSize="mini"-->
-        <!--                android:src="@drawable/ic_mic_none_white_24dp"-->
-        <!--                android:backgroundTint="@color/colorLeft" />-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/layout_fabs_fab_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/layout_fabs_fab_1"
+            app:layout_constraintEnd_toEndOf="@id/layout_fabs_fab_1"
+            app:layout_constraintBottom_toTopOf="@id/layout_fabs_fab_1"
+            android:layout_marginBottom="8dp"
+            app:fabSize="mini"
+            android:src="@drawable/ic_mic_none_white_24dp"
+            android:backgroundTint="@color/colorLeft" />
 
         <!-- FLOATING ACTION BUTTON : Number 1 -->
 
