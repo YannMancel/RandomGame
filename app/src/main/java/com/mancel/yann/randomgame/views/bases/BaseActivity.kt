@@ -17,6 +17,10 @@ import com.mancel.yann.randomgame.R
  */
 abstract class BaseActivity : AppCompatActivity() {
 
+    // FIELDS --------------------------------------------------------------------------------------
+
+    protected var mDuration: Long = 0L
+
     // METHODS -------------------------------------------------------------------------------------
 
     // -- ABSTRACT METHODS --
@@ -33,6 +37,9 @@ abstract class BaseActivity : AppCompatActivity() {
 
         // Associates the layout file to this class
         setContentView(this.getActivityLayout())
+
+        // Resources
+        this.mDuration = resources.getInteger(R.integer.duration_animation).toLong()
 
         // Configures the fields
         this.configureFields()
@@ -79,7 +86,7 @@ abstract class BaseActivity : AppCompatActivity() {
      * @param cls the [Class] of the activity to launch
      * @param T a type parameter which extends to [Activity]
      */
-    protected fun <T : Activity> startAnotherActivity(context: Context, cls: Class<T>) {
+    protected fun <T: Activity> startAnotherActivity(context: Context, cls: Class<T>) {
         val intent = Intent(context, cls)
         startActivity(intent)
 

@@ -70,6 +70,6 @@
     <!-- FAB -->
 
     <include
-        layout="@layout/layout_fabs"/>
+        layout="@layout/layout_linear_fabs"/>
 
 </android.support.design.widget.CoordinatorLayout>

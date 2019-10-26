@@ -47,4 +47,9 @@
         app:titleTextColor="@android:color/white"
         android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
+    <!-- FAB -->
+
+    <include
+        layout="@layout/layout_circular_fabs"/>
+
 </android.support.constraint.ConstraintLayout>

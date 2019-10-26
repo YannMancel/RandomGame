@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_circular_fabs_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- FLOATING ACTION BUTTON : Number 3 -->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/layout_circular_fabs_fab_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintCircle="@id/layout_circular_fabs_fab_0"
+            app:layout_constraintCircleAngle="0"
+            app:layout_constraintCircleRadius="@dimen/radius_circular_fab"
+            tools:ignore="MissingConstraints"
+            app:fabSize="mini"
+            android:src="@drawable/ic_mic_none_white_24dp"
+            android:backgroundTint="@color/colorRight" />
+
+        <!-- FLOATING ACTION BUTTON : Number 2 -->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/layout_circular_fabs_fab_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintCircle="@id/layout_circular_fabs_fab_0"
+            app:layout_constraintCircleAngle="315"
+            app:layout_constraintCircleRadius="@dimen/radius_circular_fab"
+            tools:ignore="MissingConstraints"
+            app:fabSize="mini"
+            android:src="@drawable/ic_mic_none_white_24dp"
+            android:backgroundTint="@color/colorLeft" />
+
+        <!-- FLOATING ACTION BUTTON : Number 1 -->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/layout_circular_fabs_fab_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintCircle="@id/layout_circular_fabs_fab_0"
+            app:layout_constraintCircleAngle="270"
+            app:layout_constraintCircleRadius="@dimen/radius_circular_fab"
+            tools:ignore="MissingConstraints"
+            app:fabSize="mini"
+            android:src="@drawable/ic_mic_none_white_24dp"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <!-- FLOATING ACTION BUTTON : Number 0 -->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/layout_circular_fabs_fab_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:fabSize="normal"
+            android:src="@drawable/ic_add"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</merge>

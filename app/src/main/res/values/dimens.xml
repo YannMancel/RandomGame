@@ -11,6 +11,8 @@
 
     <!-- FLOATING ACTION BUTTON -->
 <!--    <dimen name="design_fab_image_size" tools:override="true">56dp</dimen>-->
+    <dimen name="radius_circular_fab">72dp</dimen>
+    <!-- app:layout_constraintCircleRadius = 56/2 + 3*8 + 40/2 = 72 -->
 
     <!-- BUTTON -->
     <dimen name="radius_button">10dp</dimen>
