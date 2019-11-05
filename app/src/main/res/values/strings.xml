@@ -12,7 +12,7 @@
     <string name="random_draw_text">RANDOM DRAW</string>
 
     <!-- item_dice.xml -->
-    <string name="dice_id">Dice number: 1</string>
-    <string name="dice_result">Result: 6</string>
+    <string name="dice_id">Dice: %d</string>
+    <string name="dice_result">Result: %d</string>
 
 </resources>

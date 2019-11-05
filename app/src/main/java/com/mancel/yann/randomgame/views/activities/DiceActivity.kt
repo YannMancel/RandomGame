@@ -101,7 +101,7 @@ class DiceActivity : BaseActivity(), View.OnClickListener {
     private fun configureRecyclerView() {
         // DATA
         val dices: MutableList<Dice> = mutableListOf()
-        for (i in 1..5) dices.add(Dice(i,4))
+        for (i in 1..6) dices.add(Dice(i,i))
 
         // ADAPTER
         this.mAdapter = DiceAdapter().apply { updateData(dices) }

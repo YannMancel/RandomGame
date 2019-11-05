@@ -29,10 +29,21 @@ class DiceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun updateItem(dice: Dice) {
         // IMAGE
+        this.mImage.background = when (dice.result) {
+            // Dice value
+            1 -> itemView.context.getDrawable(R.drawable.dice1)
+            2 -> itemView.context.getDrawable(R.drawable.dice2)
+            3 -> itemView.context.getDrawable(R.drawable.dice3)
+            4 -> itemView.context.getDrawable(R.drawable.dice4)
+            5 -> itemView.context.getDrawable(R.drawable.dice5)
+            6 -> itemView.context.getDrawable(R.drawable.dice6)
 
+            // Error
+            else -> throw Exception("Impossible action: Dice value is out of boundary")
+        }
 
         // TEXT VIEW
-        this.mIdText.text = "Id = ${dice.id}"
-        this.mResultText.text = "Result = ${dice.result}"
+        this.mIdText.text = itemView.context.getString(R.string.dice_id, dice.id)
+        this.mResultText.text = itemView.context.getString(R.string.dice_result, dice.result)
     }
 }
